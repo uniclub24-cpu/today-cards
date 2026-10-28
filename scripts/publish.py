@@ -14,6 +14,16 @@ IG = "https://graph.instagram.com/v23.0"
 TH = "https://graph.threads.net/v1.0"
 
 
+def fail(msg):
+    """GitHub 화면(annotations)에 오류가 보이도록 출력 후 종료. 토큰은 절대 출력하지 않는다."""
+    for k in ("IG_TOKEN", "THREADS_TOKEN"):
+        v = os.environ.get(k)
+        if v:
+            msg = msg.replace(v, "***")
+    print("::error::" + msg.replace("%", "%25").replace("\r", "").replace("\n", "%0A"))
+    raise SystemExit(1)
+
+
 def call(method, url, params):
     data = urllib.parse.urlencode(params).encode()
     if method == "GET":
@@ -26,7 +36,7 @@ def call(method, url, params):
     except urllib.error.HTTPError as e:
         body = e.read().decode(errors="replace")
         # 토큰이 로그에 찍히지 않도록 오류 본문만 출력
-        raise SystemExit(f"API 오류 {e.code} @ {url.split('?')[0]}\n{body}")
+        fail(f"API 오류 {e.code} @ {url.split('?')[0]}\n{body}")
 
 
 def wait_ready(base, cid, token, field="status_code", ok=("FINISHED",), tries=20):
@@ -36,12 +46,18 @@ def wait_ready(base, cid, token, field="status_code", ok=("FINISHED",), tries=20
         if s in ok or s == "PUBLISHED":
             return
         if s in ("ERROR", "EXPIRED"):
-            raise SystemExit(f"컨테이너 오류: {st}")
+            fail(f"컨테이너 오류: {st}")
         time.sleep(3)
-    raise SystemExit(f"컨테이너 준비 시간 초과: {cid}")
+    fail(f"컨테이너 준비 시간 초과: {cid}")
 
 
 def check():
+    for k in ("IG_TOKEN", "THREADS_TOKEN"):
+        v = os.environ.get(k, "")
+        if not v:
+            fail(f"{k} Secret이 비어 있음")
+        if v != v.strip():
+            fail(f"{k} 앞뒤에 공백/줄바꿈이 있음 — Secret을 다시 붙여넣어 주세요")
     ig = call("GET", f"{IG}/me", {"fields": "user_id,username,account_type", "access_token": os.environ["IG_TOKEN"]})
     print("인스타 OK:", ig.get("username"), ig.get("account_type"))
     lim = call("GET", f"{IG}/me/content_publishing_limit", {"fields": "quota_usage,config", "access_token": os.environ["IG_TOKEN"]})
@@ -54,7 +70,7 @@ def urls(folder):
     repo, sha = os.environ["REPO"], os.environ["SHA"]
     files = sorted(glob.glob(os.path.join(folder, "[0-9][0-9].jpg")))
     if not 2 <= len(files) <= 10:
-        raise SystemExit(f"이미지는 2~10장이어야 함 (현재 {len(files)}장)")
+        fail(f"이미지는 2~10장이어야 함 (현재 {len(files)}장)")
     return [f"https://raw.githubusercontent.com/{repo}/{sha}/{f}" for f in files]
 
 

@@ -1,0 +1,68 @@
+name: Make card images
+
+on:
+  push:
+    branches: [main]
+    paths: ["posts/**/issue.json"]
+  workflow_dispatch:
+    inputs:
+      folder:
+        description: "폴더 (예: posts/20261028-car)"
+        required: true
+      force:
+        description: "사진을 새로 만들기 (yes/no)"
+        default: "no"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: make-images
+  cancel-in-progress: false
+
+jobs:
+  make:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: 대상 폴더 찾기
+        id: find
+        run: |
+          if [ -n "${{ github.event.inputs.folder }}" ]; then
+            echo "folders=${{ github.event.inputs.folder }}" >> "$GITHUB_OUTPUT"
+          else
+            BEFORE="${{ github.event.before }}"
+            if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+              CHANGED=$(git ls-files 'posts/*/issue.json')
+            else
+              CHANGED=$(git diff --name-only "$BEFORE" "${{ github.sha }}" -- 'posts/*/issue.json')
+            fi
+            echo "folders=$(echo "$CHANGED" | xargs -r -n1 dirname | sort -u | tr '\n' ' ')" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: 한글 폰트·Pillow 설치
+        if: steps.find.outputs.folders != ''
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-cjk fonts-noto-cjk-extra > /dev/null
+          pip install -q pillow
+
+      - name: 사진 생성 + 카드 합성
+        if: steps.find.outputs.folders != ''
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI_KEY || secrets.GOOGLE_API_KEY || secrets.GEMINI }}
+        run: |
+          for f in ${{ steps.find.outputs.folders }}; do
+            python scripts/gen_images.py "$f" ${{ github.event.inputs.force == 'yes' && '--force' || '' }}
+          done
+
+      - name: 결과 저장
+        if: steps.find.outputs.folders != ''
+        run: |
+          git config user.name "today-bot"
+          git config user.email "today-bot@users.noreply.github.com"
+          git add -A posts
+          git diff --cached --quiet || (git commit -m "카드 이미지 생성 [skip ci]" && git push)

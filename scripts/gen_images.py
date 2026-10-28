@@ -51,6 +51,7 @@ def generate(model, prompt):
             body["generationConfig"].pop("imageConfig"); continue  # 비율 옵션 미지원 모델이면 빼고 재시도
         if "_error" in res:
             if res["_error"] in (429, 500, 503):
+                note(f"[{model}] 재시도 {attempt + 1}: 오류 {res['_error']} {res['_body'][:400]}", "warning")
                 time.sleep(15 * (attempt + 1)); continue
             note(f"이미지 생성 오류 {res['_error']}: {res['_body']}", "error"); sys.exit(1)
         for c in res.get("candidates", []):
@@ -77,7 +78,8 @@ def main(folder, force=False):
             continue
         if not s.get("prompt"):
             continue
-        model = model or pick_model()
+        if not model:
+            model = pick_model(); note(f"사용 모델: {model}")
         im = generate(model, s["prompt"])
         ImageOps.fit(im, (1080, 1350), Image.LANCZOS).save(path, quality=92)
         made += 1

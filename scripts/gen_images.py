@@ -64,6 +64,17 @@ def generate(model, prompt):
     note("이미지 생성 3회 실패: " + prompt[:60], "error"); sys.exit(1)
 
 
+def render_photo(folder):
+    tmp = os.path.join(folder, "_render")
+    subprocess.run([sys.executable, "scripts/render3.py", os.path.join(folder, "issue.json"), tmp, os.path.join(folder, "raw")], check=True)
+    n = 0
+    for f in sorted(os.listdir(tmp)):
+        Image.open(os.path.join(tmp, f)).convert("RGB").save(os.path.join(folder, f.replace(".png", ".jpg")), quality=92)
+        os.remove(os.path.join(tmp, f)); n += 1
+    os.rmdir(tmp)
+    note(f"실사형 카드 {n}장 합성 완료: {folder}")
+
+
 def render_editorial(folder):
     tmp = os.path.join(folder, "_render")
     subprocess.run([sys.executable, "scripts/render2.py", os.path.join(folder, "issue.json"), tmp], check=True)
@@ -79,6 +90,11 @@ def main(folder, force=False):
     meta = json.load(open(os.path.join(folder, "issue.json"), encoding="utf-8")).get("meta", {})
     if meta.get("renderer") == "editorial":  # 사진 없는 글 카드 — Gemini 불필요
         return render_editorial(folder)
+    if meta.get("photos") == "stock":  # 무료 사진(Pixabay/Openverse/커먼즈) + 실사형 카드
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import fetch_photos
+        fetch_photos.main(folder, force)
+        return render_photo(folder)
     if not os.environ.get("GEMINI_API_KEY"):
         note("GEMINI_API_KEY Secret을 찾을 수 없음 (이름 확인 필요)", "error"); sys.exit(1)
     issue = json.load(open(os.path.join(folder, "issue.json"), encoding="utf-8"))

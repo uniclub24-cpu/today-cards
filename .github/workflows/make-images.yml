@@ -54,6 +54,7 @@ jobs:
         if: steps.find.outputs.folders != ''
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI_KEY || secrets.GOOGLE_API_KEY || secrets.GEMINI }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
         run: |
           for f in ${{ steps.find.outputs.folders }}; do
             python scripts/gen_images.py "$f" ${{ github.event.inputs.force == 'yes' && '--force' || '' }}

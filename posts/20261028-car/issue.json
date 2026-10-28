@@ -1,57 +1,97 @@
 {
- "meta": {"date": "2026. 10. 28", "tag": "커뮤니티 화제", "source": "JTBC 사건반장 제보 · 헤럴드경제 보도 재구성"},
+ "meta": {
+  "date": "2026. 10. 28",
+  "tag": "커뮤니티 화제",
+  "source": "JTBC 사건반장 제보 · 헤럴드경제 보도 재구성",
+  "photos": "stock"
+ },
  "slides": [
-  {"type": "cover", "kicker": "커뮤니티 발칵",
+  {
+   "type": "cover",
+   "kicker": "커뮤니티 발칵",
    "headline": "\"차 빼드릴게요\"\n!그 차로 장 보고 왔다",
    "size": 92,
    "sub": "양꼬치 먹는 사이 사라진 내 차,\n블랙박스에 찍힌 20분",
-   "img": "01.jpg",
-   "prompt": "Night street in Busan, a dark sedan pulling away from a small lamb skewer restaurant with red lanterns and steamy windows, motion blur on taillights, wet asphalt reflections, candid documentary photo, 35mm, shallow depth of field, no readable text, no faces"},
-
-  {"type": "story", "kicker": "부산의 한 양꼬치집, 오후 8시",
+   "photo": {
+    "q": "car night street taillights",
+    "alt": [
+     "car night city"
+    ]
+   }
+  },
+  {
+   "type": "story",
+   "kicker": "부산의 한 양꼬치집, 오후 8시",
    "title": "가족과 {저녁 먹던 중}\n사장이 다가왔다",
-   "body": "\"차 좀 옮겨야 해서요, 키 주시겠어요?\"\n잠깐 빼고 다시 대주는 줄 알았다.",
-   "img": "02.jpg",
-   "prompt": "Close-up of a hand handing over a car key across a restaurant table with sizzling lamb skewers on a charcoal grill, warm tungsten light, smoke, candid photo, faces out of frame"},
-
-  {"type": "story", "kicker": "약 15분 뒤",
+   "body": "\"차 좀 옮겨야 해서요, 키 주시겠어요?\"\n잠깐 빼고 다시 대주는 줄 알았다."
+  },
+  {
+   "type": "story",
+   "kicker": "약 15분 뒤",
    "title": "화장실 가려고 나왔는데\n{차가 없다}",
-   "img": "03.jpg",
-   "prompt": "An empty parking spot in front of a small Korean restaurant at night, a lone person seen from behind standing and looking around, sodium street light, documentary photo, no readable signs"},
-
-  {"type": "story", "kicker": "그때 맞은편에서",
+   "photo": {
+    "q": "empty parking lot night",
+    "alt": [
+     "parking night"
+    ]
+   }
+  },
+  {
+   "type": "story",
+   "kicker": "그때 맞은편에서",
    "title": "{내 차}가\n들어오고 있었다",
-   "body": "운전석엔 사장.\n트렁크에서 짐을 내리며 얼버무렸다.",
-   "img": "04.jpg",
-   "prompt": "A sedan with headlights on driving into a narrow Korean alley at night, seen from the front, glare from headlights, driver silhouette not recognizable, cinematic documentary photo"},
-
-  {"type": "story", "kicker": "블랙박스를 돌려보니",
+   "body": "운전석엔 사장.\n트렁크에서 짐을 내리며 얼버무렸다."
+  },
+  {
+   "type": "story",
+   "kicker": "블랙박스를 돌려보니",
    "title": "근처 {마트}까지\n20분간 운전",
    "body": "손님 차로 장을 보고 온 것이었다.",
-   "img": "05.jpg",
-   "prompt": "Dashcam point of view through a car windshield at night arriving at a Korean supermarket parking lot, wide angle lens distortion, slightly grainy, timestamp-like overlay blurred and unreadable"},
-
-  {"type": "quote",
+   "photo": {
+    "q": "supermarket parking lot night",
+    "alt": [
+     "supermarket night"
+    ]
+   }
+  },
+  {
+   "type": "quote",
    "quote": "사고 안 났잖아요,\n다음에 {서비스} 드릴게요",
-   "body": "항의하자 돌아온 사장의 말 (보도 내용 요지)\n결국 식사비 11만 원 환불로 마무리됐다.",
-   "img": "06.jpg",
-   "prompt": "Out-of-focus restaurant counter at night, a shrugging middle-aged man silhouette in background heavily blurred, receipt and car key on the counter in sharp focus, moody light"},
-
-  {"type": "info", "tag": "알아두세요",
+   "body": "항의하자 돌아온 사장의 말 (보도 내용 요지)\n결국 식사비 11만 원 환불로 마무리됐다."
+  },
+  {
+   "type": "info",
+   "tag": "알아두세요",
    "title": "이거, {처벌}될까?",
    "items": [
-    {"head": "형법상 '자동차 불법사용죄'", "desc": "동의 없이 남의 차를 일시 사용하면\n3년 이하 징역·500만 원 이하 벌금 등"},
-    {"head": "키 맡길 땐 범위를 분명히", "desc": "'어디로 옮기는지' 한마디 확인하기"},
-    {"head": "블랙박스는 상시 녹화", "desc": "이상하면 영상 확보 후 바로 112"}
+    {
+     "head": "형법상 '자동차 불법사용죄'",
+     "desc": "동의 없이 남의 차를 일시 사용하면\n3년 이하 징역·500만 원 이하 벌금 등"
+    },
+    {
+     "head": "키 맡길 땐 범위를 분명히",
+     "desc": "'어디로 옮기는지' 한마디 확인하기"
+    },
+    {
+     "head": "블랙박스는 상시 녹화",
+     "desc": "이상하면 영상 확보 후 바로 112"
+    }
    ],
-   "source": "형법 제331조의2 · 법률 자문 아님",
-   "img": "07.jpg",
-   "prompt": "Top-down photo of a car key, a smartphone showing a dashcam app (screen blurred), and a receipt on a dark wooden table, moody low-key lighting"},
-
-  {"type": "ask",
+   "source": "형법 제331조의2 · 법률 자문 아님"
+  },
+  {
+   "type": "ask",
    "title": "여러분이라면?",
-   "options": ["환불받고 끝낸다", "경찰에 신고한다"],
-   "img": "08.jpg",
-   "prompt": "Rear view of a Korean family of three walking away from a restaurant at night on a wet street, neon reflections, cinematic, faces not visible"}
+   "options": [
+    "환불받고 끝낸다",
+    "경찰에 신고한다"
+   ],
+   "photo": {
+    "q": "family walking night street",
+    "alt": [
+     "people walking night city"
+    ]
+   }
+  }
  ]
 }

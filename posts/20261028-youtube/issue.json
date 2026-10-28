@@ -3,53 +3,73 @@
   "date": "2026. 10. 28",
   "tag": "유튜브 급상승",
   "source": "YouTube 인기 급상승(한국) 10.28 15시 기준",
-  "renderer": "editorial"
+  "photos": "stock"
  },
  "slides": [
   {
    "type": "cover",
    "kicker": "오늘의 유튜브",
    "headline": "급상승 1위,\n!아일릿이\n!경찰이 됐다",
-   "size": 108,
-   "sub": "지금 한국 유튜브를 달군 영상 4개,\n댓글 반응까지 정리했어요"
+   "size": 100,
+   "sub": "지금 한국 유튜브를 달군 영상 4개,\n댓글 반응까지 정리했어요",
+   "photo": {
+    "q": "kpop concert stage lights",
+    "alt": [
+     "concert crowd lights",
+     "concert stage"
+    ]
+   }
   },
   {
-   "type": "post",
-   "label": "급상승 1위 · 음악",
-   "label_sub": "HYBE LABELS · 10월 26일 공개",
-   "icon": "1",
-   "title": "아일릿 '체포하겠어' MV",
-   "body": "공개 이틀 만에 조회수 {885만},\n좋아요 39만 개.\n\n댓글 최고 인기는 이 발견.\n뮤비 속 'AKOM'이 멤버\n{모카 이름을 거꾸로} 쓴 것이라는 것."
+   "type": "story",
+   "kicker": "급상승 1위 · 음악",
+   "title": "아일릿 '체포하겠어' MV\n이틀 만에 {885만} 뷰",
+   "body": "댓글 최고 인기는 이 발견.\n뮤비 속 'AKOM'은 멤버\n모카 이름을 거꾸로 쓴 것.",
+   "photo": {
+    "commons": "ILLIT girl group",
+    "q": "lightstick concert",
+    "alt": [
+     "kpop fans concert"
+    ]
+   }
   },
   {
-   "type": "post",
-   "label": "급상승 8위 · 엔터테인먼트",
-   "label_sub": "Marvel Entertainment · 31초 TV 광고",
-   "icon": "8",
-   "title": "'어벤져스: 둠스데이'\n31초 영상에 {1,594만} 뷰",
-   "body": "12월 18일 개봉을 앞둔 짧은 광고 영상.\n댓글은 지친 표정의 토르 이야기뿐.\n\"토르가 {둠 편으로 넘어갈 기세}\"\n같은 반응이 좋아요 수만 개."
+   "type": "story",
+   "kicker": "급상승 8위 · 영화",
+   "title": "'어벤져스: 둠스데이'\n31초 광고에 {1,594만} 뷰",
+   "body": "12월 18일 개봉.\n댓글은 지친 표정의 토르 이야기뿐.\n\"토르가 둠 편으로 넘어갈 기세\""
   },
   {
-   "type": "post",
-   "label": "급상승 2위 · 엔터테인먼트",
-   "label_sub": "넷플릭스 코리아 · 11월 10일 공개",
-   "icon": "2",
-   "title": "'데블스 플랜: 데드 어게인'\n예고편",
-   "body": "두뇌 서바이벌 레전드와\n신흥 강자들의 대결.\n\n댓글 반응은 한마디로\n\"사실상 {지니어스 시즌5}\""
+   "type": "story",
+   "kicker": "급상승 2위 · 예능",
+   "title": "'데블스 플랜: 데드 어게인'\n11월 10일 공개",
+   "body": "두뇌 서바이벌 레전드와 신흥 강자의 대결.\n댓글 반응은 \"사실상 {지니어스 시즌5}\"",
+   "photo": {
+    "q": "chess pieces dark dramatic",
+    "alt": [
+     "chess board"
+    ]
+   }
   },
   {
-   "type": "post",
-   "label": "급상승 3위 · 게임",
-   "label_sub": "LCK · 롤드컵 스위스 스테이지 4일 차",
-   "icon": "3",
-   "title": "{6시간 30분}짜리 풀영상이\n185만 뷰",
-   "body": "롤드컵 시즌답게\n급상승 목록에 롤드컵 영상만 4개.\n\n\"이제 진출팀끼리는\n{무조건 이기는 팀}이 없다\"는 반응."
+   "type": "story",
+   "kicker": "급상승 3위 · 게임",
+   "title": "롤드컵 {6시간 30분}\n풀영상이 185만 뷰",
+   "body": "급상승 목록에 롤드컵 영상만 4개.\n\"이제 진출팀끼리는\n무조건 이기는 팀이 없다\"",
+   "photo": {
+    "commons": "League of Legends World Championship",
+    "q": "esports arena",
+    "alt": [
+     "esports gaming tournament",
+     "gaming setup neon"
+    ]
+   }
   },
   {
-   "type": "big",
-   "label": "한눈에 보기",
-   "text": "급상승 29개 중\n{음악 13 · 게임 12}",
-   "sub": "나머지는 영화·예능 관련 영상 4개.\n이번 주 한국 유튜브는\n신곡 컴백과 롤드컵이 양분했다."
+   "type": "story",
+   "kicker": "한눈에 보기",
+   "title": "급상승 29개 중\n{음악 13 · 게임 12}",
+   "body": "나머지는 영화·예능 관련 4개.\n신곡 컴백과 롤드컵이 양분한 한 주."
   },
   {
    "type": "ask",
@@ -57,8 +77,7 @@
    "options": [
     "아일릿 '체포하겠어'",
     "어벤져스: 둠스데이"
-   ],
-   "cta": "댓글로 A / B 남겨주세요"
+   ]
   }
  ]
 }

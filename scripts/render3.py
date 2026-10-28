@@ -42,7 +42,23 @@ def placeholder(prompt, seed):
     return im
 
 
+def plain_bg(i):
+    im = Image.new("RGB", (W * K, H * K))
+    d = ImageDraw.Draw(im)
+    for y in range(H * K):
+        t = y / (H * K)
+        d.line([(0, y), (W * K, y)], fill=(int(12 + 8 * (1 - t)), int(30 + 14 * (1 - t)), int(72 + 22 * (1 - t))))
+    for k in range(9):  # 은은한 가로 괘선 (신문 지면 느낌)
+        y = int((300 + k * 70) * K)
+        d.line([(M * K, y), ((W - M) * K, y)], fill=(28, 52, 104), width=K)
+    return im
+
+
 def load_bg(s, imgdir, i):
+    f = os.path.join(imgdir or "", s.get("img", "")) if s.get("img") else None
+    s["_has_photo"] = bool(f and os.path.exists(f))
+    if not s["_has_photo"] and (s.get("photo") or not s.get("prompt")):
+        return plain_bg(i)
     p = os.path.join(imgdir or "", s.get("img", "")) if s.get("img") else None
     if p and os.path.exists(p):
         im = ImageOps.fit(Image.open(p).convert("RGB"), (W * K, H * K), Image.LANCZOS, centering=(0.5, s.get("focus", 0.4)))
@@ -126,13 +142,23 @@ def chrome(c, meta, n, total, s):
     c.text((W - M - w / 2, 91), tag, ft, "white", anchor="mm", shadow=False)
     # 하단: AI 이미지 표기 + 출처 + 페이지
     fs = F(SANS["Regular"], 20)
-    note = "AI 생성 이미지(연출)" + ("  ·  " + s.get("source", meta.get("source", "")) if s.get("source", meta.get("source")) else "")
+    src = s.get("source", meta.get("source", ""))
+    if s.get("credit"):
+        lead = s["credit"]
+    elif s.get("prompt") and not s.get("photo"):
+        lead = "AI 생성 이미지(연출)"
+    else:
+        lead = ""
+    note = "  ·  ".join(x for x in (lead, src) if x)
+    if len(note) > 70:
+        note = lead or src
     c.text((M, H - 62), note, fs, "#AEB8C8", shadow=False)
     c.text((W - M, H - 62), f"{n} / {total}", F(SANS["Bold"], 22), "white", anchor="ra", shadow=False)
 
 
 def slide(s, meta, n, total, imgdir):
-    im = gradient(load_bg(s, imgdir, n), start=s.get("grad", 0.34))
+    bg = load_bg(s, imgdir, n)
+    im = gradient(bg, start=s.get("grad", 0.34)) if (s.get("_has_photo") or (s.get("prompt") and not s.get("photo"))) else bg
     c = C(im)
     chrome(c, meta, n, total, s)
     typ = s.get("type", "story")
@@ -194,6 +220,11 @@ if __name__ == "__main__":
     out = sys.argv[2]; imgdir = sys.argv[3] if len(sys.argv) > 3 else None
     os.makedirs(out, exist_ok=True)
     S = issue["slides"]
+    cj = os.path.join(imgdir or "", "credits.json")
+    if imgdir and os.path.exists(cj):
+        for k, v in json.load(open(cj, encoding="utf-8")).items():
+            if 0 < int(k) <= len(S):
+                S[int(k) - 1]["credit"] = v
     for i, s in enumerate(S, 1):
         p = os.path.join(out, f"{i:02d}.png")
         slide(s, issue["meta"], i, len(S), imgdir).save(p, optimize=True)

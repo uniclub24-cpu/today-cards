@@ -3,7 +3,7 @@
 - 각 슬라이드의 "img": 이미지 파일명 (이미지폴더 안). 없으면 '이미지 자리' 플레이스홀더를 그림
 - {글자}: 하늘색 강조, !줄: 청색 띠 반전, \n 줄바꿈
 """
-import json, sys, os, random
+import json, sys, os, random, re
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageOps
 
 W, H, K = 1080, 1350, 2
@@ -55,7 +55,10 @@ def plain_bg(i):
 
 
 def load_bg(s, imgdir, i):
-    f = os.path.join(imgdir or "", s.get("img", "")) if s.get("img") else None
+    name = s.get("img") or (f"{i:02d}.jpg" if s.get("photo") else None)
+    if name:
+        s["img"] = name
+    f = os.path.join(imgdir or "", name) if name else None
     s["_has_photo"] = bool(f and os.path.exists(f))
     if not s["_has_photo"] and (s.get("photo") or not s.get("prompt")):
         return plain_bg(i)
@@ -224,7 +227,7 @@ if __name__ == "__main__":
     if imgdir and os.path.exists(cj):
         for k, v in json.load(open(cj, encoding="utf-8")).items():
             if 0 < int(k) <= len(S):
-                S[int(k) - 1]["credit"] = v
+                S[int(k) - 1]["credit"] = re.sub(r"https?://\S+", "", v).replace("  ", " ").strip()
     for i, s in enumerate(S, 1):
         p = os.path.join(out, f"{i:02d}.png")
         slide(s, issue["meta"], i, len(S), imgdir).save(p, optimize=True)

@@ -47,7 +47,7 @@ def pixabay(q, used):
         hits = [h for h in hits if h["largeImageURL"] not in used]
         if hits:
             h = max(hits, key=lambda h: score(h["imageWidth"], h["imageHeight"]) + h.get("likes", 0) / 5000)
-            return h["largeImageURL"], f"사진: {h.get('user', 'Pixabay')} · Pixabay"
+            return h["largeImageURL"], f"사진: {h.get('user', 'Pixabay')} · Pixabay", h.get("pageURL", "")
     return None
 
 
@@ -59,7 +59,7 @@ def openverse(q, used):
         return None
     r = max(res, key=lambda r: score(r.get("width") or 1, r.get("height") or 1))
     lic = f"CC {r.get('license', '').upper()} {r.get('license_version', '')}".strip()
-    return r["url"], f"사진: {r.get('creator') or '작가 미상'} · {lic}"
+    return r["url"], f"사진: {r.get('creator') or '작가 미상'} · {lic}", r.get("foreign_landing_url", "")
 
 
 def commons(q, used):
@@ -77,11 +77,11 @@ def commons(q, used):
         if not url or url in used or (ii.get("width") or 0) < 800:
             continue
         artist = re.sub("<[^>]+>", "", html.unescape(md.get("Artist", {}).get("value", ""))).strip()[:40] or "작가 미상"
-        cands.append((score(ii["width"], ii["height"]), url, f"사진: {artist} · {lic} · Wikimedia Commons"))
+        cands.append((score(ii["width"], ii["height"]), url, f"사진: {artist} · {lic} · Wikimedia Commons", pg.get("title", "")))
     if not cands:
         return None
-    _, url, credit = max(cands)
-    return url, credit
+    _, url, credit, title = max(cands)
+    return url, credit, "https://commons.wikimedia.org/wiki/" + title.replace(" ", "_")
 
 
 def main(folder, force=False):
@@ -90,6 +90,8 @@ def main(folder, force=False):
     cpath = os.path.join(raw, "credits.json")
     credits = json.load(open(cpath, encoding="utf-8")) if os.path.exists(cpath) else {}
     used, got, miss = set(), 0, []
+    spath = os.path.join(raw, "sources.json")
+    srcs = json.load(open(spath, encoding="utf-8")) if os.path.exists(spath) else {}
     for i, s in enumerate(issue["slides"], 1):
         ph = s.get("photo")
         if not ph:
@@ -107,13 +109,15 @@ def main(folder, force=False):
             found = pixabay(q, used) or openverse(q, used)
         if not found:
             miss.append(i); continue
-        url, credit = found
+        url, credit, page = found
         try:
             ImageOps.fit(download(url), (1080, 1350), Image.LANCZOS, centering=(0.5, ph.get("focus", 0.45))).save(path, quality=92)
         except Exception as e:
             note(f"{i}번 사진 다운로드 실패: {e}", "warning"); miss.append(i); continue
         used.add(url); credits[str(i)] = credit; got += 1
+        srcs[str(i)] = {"query": ph, "page": page, "image": url}
     json.dump(credits, open(cpath, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    json.dump(srcs, open(spath, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     note(f"무료 사진 {got}장 확보" + (f", 못 찾은 장: {miss} (글 카드로 대체)" if miss else ""))
     return miss
 

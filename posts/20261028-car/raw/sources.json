@@ -19,5 +19,16 @@
   },
   "page": "https://pixabay.com/photos/tram-snow-winter-night-9296118/",
   "image": "https://pixabay.com/get/gb738eeba2dc019f4608ec255344a59187425c3e40750f6d5c71f3eb9ea1b8142fc6a5edca26da7e6ef5b27417430e75017be3484f98330dc21cdd735fe369685_1280.jpg"
+ },
+ "2": {
+  "query": {
+   "q": "lamb skewers grill",
+   "alt": [
+    "skewers barbecue",
+    "yakitori grill"
+   ]
+  },
+  "page": "https://pixabay.com/photos/background-bbq-beef-steak-chicken-2684427/",
+  "image": "https://pixabay.com/get/g41868dd5ecb5f9fce8abd64360b575ca4fed688217d990d094a64842ff6b3db5f2cc2721b4104b3ab65b1a88c0b51d12055908fe197157c0bf618a4119812524_1280.jpg"
  }
 }

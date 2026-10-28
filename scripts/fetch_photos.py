@@ -84,6 +84,15 @@ def commons(q, used):
     return url, credit, "https://commons.wikimedia.org/wiki/" + title.replace(" ", "_")
 
 
+def thumb(im):
+    return list(ImageOps.fit(im, (16, 20)).convert("L").getdata())
+
+
+def is_dup(im, others):
+    t = thumb(im)
+    return any(sum(abs(a - b) for a, b in zip(t, o)) / len(t) < 12 for o in others)
+
+
 def main(folder, force=False):
     issue = json.load(open(os.path.join(folder, "issue.json"), encoding="utf-8"))
     raw = os.path.join(folder, "raw"); os.makedirs(raw, exist_ok=True)
@@ -100,20 +109,30 @@ def main(folder, force=False):
         path = os.path.join(raw, name)
         if os.path.exists(path) and not force:
             continue
-        found = None
-        if ph.get("commons"):
-            found = commons(ph["commons"], used)
-        for q in [ph.get("q")] + ph.get("alt", []):
-            if found or not q:
+        others = [thumb(Image.open(os.path.join(raw, f))) for f in os.listdir(raw)
+                  if f.endswith(".jpg") and f != name]
+        found = img = None
+        for attempt in range(5):  # 같은 게시물 안에서 중복 사진 피하기
+            found = None
+            if ph.get("commons"):
+                found = commons(ph["commons"], used)
+            for q in [ph.get("q")] + ph.get("alt", []):
+                if found or not q:
+                    break
+                found = pixabay(q, used) or openverse(q, used)
+            if not found:
                 break
-            found = pixabay(q, used) or openverse(q, used)
+            try:
+                img = download(found[0])
+            except Exception as e:
+                note(f"{i}번 사진 다운로드 실패: {e}", "warning"); used.add(found[0]); found = None; continue
+            if is_dup(img, others):
+                used.add(found[0]); found = None; continue
+            break
         if not found:
             miss.append(i); continue
         url, credit, page = found
-        try:
-            ImageOps.fit(download(url), (1080, 1350), Image.LANCZOS, centering=(0.5, ph.get("focus", 0.45))).save(path, quality=92)
-        except Exception as e:
-            note(f"{i}번 사진 다운로드 실패: {e}", "warning"); miss.append(i); continue
+        ImageOps.fit(img, (1080, 1350), Image.LANCZOS, centering=(0.5, ph.get("focus", 0.45))).save(path, quality=92)
         used.add(url); credits[str(i)] = credit; got += 1
         srcs[str(i)] = {"query": ph, "page": page, "image": url}
     json.dump(credits, open(cpath, "w", encoding="utf-8"), ensure_ascii=False, indent=1)

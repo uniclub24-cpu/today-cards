@@ -1,0 +1,17 @@
+name: Check tokens
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 0 * * 1"   # 매주 월요일 09:17 (한국시간) 토큰 상태 점검
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 토큰 확인
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
+        run: python scripts/publish.py check

@@ -1,0 +1,58 @@
+name: Publish To:Day post
+
+on:
+  push:
+    branches: [main]
+    paths: ["posts/**/post.json"]
+  workflow_dispatch:
+    inputs:
+      folder:
+        description: "게시할 폴더 (예: posts/20261028-sikhye)"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 게시할 폴더 찾기
+        id: find
+        run: |
+          if [ -n "${{ github.event.inputs.folder }}" ]; then
+            echo "folders=${{ github.event.inputs.folder }}" >> "$GITHUB_OUTPUT"
+          else
+            BEFORE="${{ github.event.before }}"
+            if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+              CHANGED=$(git ls-files 'posts/*/post.json')
+            else
+              CHANGED=$(git diff --name-only "$BEFORE" "${{ github.sha }}" -- 'posts/*/post.json')
+            fi
+            echo "folders=$(echo "$CHANGED" | xargs -r -n1 dirname | sort -u | tr '\n' ' ')" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: 인스타그램·스레드 게시
+        if: steps.find.outputs.folders != ''
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.sha }}
+        run: python scripts/publish.py post ${{ steps.find.outputs.folders }}
+
+      - name: 게시 기록 저장
+        if: steps.find.outputs.folders != ''
+        run: |
+          git config user.name "today-bot"
+          git config user.email "today-bot@users.noreply.github.com"
+          git add posts/*/published.json
+          git diff --cached --quiet || (git commit -m "게시 기록 [skip ci]" && git push)

@@ -28,20 +28,19 @@
   {
    "type": "story",
    "kicker": "약 15분 뒤",
-   "title": "화장실 가려고 나왔는데\n{차가 없다}",
-   "photo": {
-    "q": "empty parking garage night",
-    "alt": [
-     "empty parking space",
-     "parking lot lights night"
-    ]
-   }
+   "title": "화장실 가려고 나왔는데\n{차가 없다}"
   },
   {
    "type": "story",
    "kicker": "그때 맞은편에서",
    "title": "{내 차}가\n들어오고 있었다",
-   "body": "운전석엔 사장.\n트렁크에서 짐을 내리며 얼버무렸다."
+   "body": "운전석엔 사장.\n트렁크에서 짐을 내리며 얼버무렸다.",
+   "photo": {
+    "q": "car headlights night",
+    "alt": [
+     "headlights dark street"
+    ]
+   }
   },
   {
    "type": "story",

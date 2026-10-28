@@ -23,7 +23,14 @@
    "type": "story",
    "kicker": "부산의 한 양꼬치집, 오후 8시",
    "title": "가족과 {저녁 먹던 중}\n사장이 다가왔다",
-   "body": "\"차 좀 옮겨야 해서요, 키 주시겠어요?\"\n잠깐 빼고 다시 대주는 줄 알았다."
+   "body": "\"차 좀 옮겨야 해서요, 키 주시겠어요?\"\n잠깐 빼고 다시 대주는 줄 알았다.",
+   "photo": {
+    "q": "lamb skewers grill",
+    "alt": [
+     "skewers barbecue",
+     "yakitori grill"
+    ]
+   }
   },
   {
    "type": "story",
@@ -34,13 +41,7 @@
    "type": "story",
    "kicker": "그때 맞은편에서",
    "title": "{내 차}가\n들어오고 있었다",
-   "body": "운전석엔 사장.\n트렁크에서 짐을 내리며 얼버무렸다.",
-   "photo": {
-    "q": "car headlights night",
-    "alt": [
-     "headlights dark street"
-    ]
-   }
+   "body": "운전석엔 사장.\n트렁크에서 짐을 내리며 얼버무렸다."
   },
   {
    "type": "story",

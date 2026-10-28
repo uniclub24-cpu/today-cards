@@ -1,0 +1,13 @@
+{
+ "3": {
+  "query": {
+   "q": "empty parking garage night",
+   "alt": [
+    "empty parking space",
+    "parking lot lights night"
+   ]
+  },
+  "page": "https://pixabay.com/photos/cars-sports-car-luxury-classic-6482367/",
+  "image": "https://pixabay.com/get/g0c351250125d4b4e3ebbb3a3568741aa20d87d40f0a6545f1845655ce10d10b2a229fe1281ce6ba78a3cec28d333ae191fd675148a4aa3d784fe5dbc6eef022b_1280.jpg"
+ }
+}

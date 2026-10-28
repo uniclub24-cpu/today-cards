@@ -61,9 +61,9 @@ def check():
         if v != v.strip():
             fail(f"{k} 앞뒤에 공백/줄바꿈이 있음 — Secret을 다시 붙여넣어 주세요")
     ig = call("GET", f"{IG}/me", {"fields": "user_id,username,account_type", "access_token": os.environ["IG_TOKEN"]})
-    print("인스타 OK:", ig.get("username"), ig.get("account_type"))
+    print(f"::notice::인스타 OK: @{ig.get('username')} ({ig.get('account_type')})")
     lim = call("GET", f"{IG}/me/content_publishing_limit", {"fields": "quota_usage,config", "access_token": os.environ["IG_TOKEN"]})
-    print("인스타 게시 한도:", json.dumps(lim.get("data", lim), ensure_ascii=False))
+    print("::notice::인스타 게시 한도: " + json.dumps(lim.get("data", lim), ensure_ascii=False))
     if not os.environ.get("THREADS_TOKEN"):
         return
     th = call("GET", f"{TH}/me", {"fields": "id,username", "access_token": os.environ["THREADS_TOKEN"]})

@@ -13,10 +13,10 @@
    "size": 92,
    "sub": "유튜브 숏폼 광고 속 가짜 후기·가짜 의사,\n9개월 동안 420건 걸렸다",
    "photo": {
-    "q": "smartphone",
+    "q": "social media phone screen",
     "alt": [
-     "mobile phone hand",
-     "phone screen"
+     "smartphone app screen",
+     "phone notifications"
     ]
    }
   },
@@ -43,13 +43,7 @@
    "type": "story",
    "kicker": "두 번째 수법",
    "title": "흰 가운의 그 의사도\n{AI}였다",
-   "body": "전문가 사칭 153건.\n의사·약사·간호사 사칭 46건,\n교수·개발자·장인 사칭 107건.",
-   "photo": {
-    "q": "stethoscope",
-    "alt": [
-     "stethoscope desk"
-    ]
-   }
+   "body": "전문가 사칭 153건.\n의사·약사·간호사 사칭 46건,\n교수·개발자·장인 사칭 107건."
   },
   {
    "type": "info",

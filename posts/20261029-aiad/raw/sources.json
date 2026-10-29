@@ -1,15 +1,4 @@
 {
- "1": {
-  "query": {
-   "q": "smartphone",
-   "alt": [
-    "mobile phone hand",
-    "phone screen"
-   ]
-  },
-  "page": "https://pixabay.com/photos/accessories-purse-bag-watch-gadget-2571416/",
-  "image": "https://pixabay.com/get/gb344f1f2236e8025dd89ff252bf888176fea2b0a9db2b73545d7f923a078344b00433a479602ab4545307c4e23473b41aa5cd3834f4adb7513a50e6d43b1a7a8_1280.jpg"
- },
  "3": {
   "query": {
    "q": "tape measure",
@@ -31,26 +20,5 @@
   },
   "page": "https://pixabay.com/photos/pills-tablets-vitamins-6516265/",
   "image": "https://pixabay.com/get/ge2a69eccc369d047ac4f0f152433eb43c19ab34d8a7ad67c046096e0bd047d49df012e8a8f6726f07b399e5a6100ea5c6ff66f294b0d52331c61a6f42508f51e_1280.jpg"
- },
- "6": {
-  "query": {
-   "q": "health food supplements shelf",
-   "alt": [
-    "supplements store",
-    "pharmacy shelf"
-   ]
-  },
-  "page": "https://pixabay.com/photos/brick-wall-room-interior-design-1850095/",
-  "image": "https://pixabay.com/get/g7a2974f54b3f8cb701efa8e4e44a42c02dd505613b1c78e87afb9cc50be3ca657cb26e596d987cbc560565fadc123a7da5f2604f11396d6e11cf0be0be7c81e4_1280.jpg"
- },
- "4": {
-  "query": {
-   "q": "stethoscope",
-   "alt": [
-    "stethoscope desk"
-   ]
-  },
-  "page": "https://pixabay.com/photos/doctor-hospital-hallway-stethoscope-10176499/",
-  "image": "https://pixabay.com/get/gbf2568abf2bc0ca166b530ee2d4a74300abb1e905935deea41ea09e1d9bfcd43b81be090de59dec3865b2118ce9576e44ea26a31c8d19802e7351119b0b542d1_1280.jpg"
  }
 }

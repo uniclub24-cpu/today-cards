@@ -20,5 +20,16 @@
   },
   "page": "https://pixabay.com/photos/pills-tablets-vitamins-6516265/",
   "image": "https://pixabay.com/get/ge2a69eccc369d047ac4f0f152433eb43c19ab34d8a7ad67c046096e0bd047d49df012e8a8f6726f07b399e5a6100ea5c6ff66f294b0d52331c61a6f42508f51e_1280.jpg"
+ },
+ "1": {
+  "query": {
+   "q": "social media phone screen",
+   "alt": [
+    "smartphone app screen",
+    "phone notifications"
+   ]
+  },
+  "page": "https://pixabay.com/photos/street-smartphone-phone-tower-4307896/",
+  "image": "https://pixabay.com/get/g58ab98d407744240bdfea108e0ec9890aa25b2fa4058f67371087f7a5fc6918c7210eb5683d3a088826fd5fb2101f6d78d497878ff14df8d23870fea05bd08f8_1280.jpg"
  }
 }

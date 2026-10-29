@@ -1,0 +1,102 @@
+{
+ "meta": {
+  "date": "2026. 10. 29",
+  "tag": "커뮤니티 화제",
+  "source": "한국소비자원 발표 · MBC·SBS·아시아경제 보도 재구성",
+  "photos": "stock"
+ },
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "커뮤니티 발칵",
+   "headline": "\"먹고 키 6cm 컸어요\"\n!그 후기, AI였다",
+   "size": 92,
+   "sub": "유튜브 숏폼 광고 속 가짜 후기·가짜 의사,\n9개월 동안 420건 걸렸다",
+   "photo": {
+    "q": "smartphone scrolling hand dark",
+    "alt": [
+     "smartphone in hand",
+     "mobile phone screen night"
+    ]
+   }
+  },
+  {
+   "type": "story",
+   "kicker": "한국소비자원 모니터링",
+   "title": "유튜브 숏폼 광고\n{420건} 차단",
+   "body": "2025년 10월부터 올해 6월까지 9개월.\n구글과 손잡고 광고를 상시 감시한 결과다."
+  },
+  {
+   "type": "story",
+   "kicker": "가장 많았던 수법",
+   "title": "체험 후기 조작\n{267건}",
+   "body": "전체의 63.6%.\n전후 사진을 합성한 '몸 변화' 광고만 171건,\n있지도 않은 소비자 후기가 96건.",
+   "photo": {
+    "q": "measuring tape height wall",
+    "alt": [
+     "measuring tape",
+     "tape measure"
+    ]
+   }
+  },
+  {
+   "type": "story",
+   "kicker": "두 번째 수법",
+   "title": "흰 가운의 그 의사도\n{AI}였다",
+   "body": "전문가 사칭 153건.\n의사·약사·간호사 사칭 46건,\n교수·개발자·장인 사칭 107건."
+  },
+  {
+   "type": "info",
+   "tag": "실제 걸린 광고",
+   "title": "이런 문구, {의심}하세요",
+   "items": [
+    {
+     "head": "\"성인도 키 6cm 컸다\"",
+     "desc": "성인용 키 크는 약 체험 후기"
+    },
+    {
+     "head": "\"차기만 해도 복근 300개 효과\"",
+     "desc": "뱃살이 식스팩으로 바뀌는 합성 영상"
+    },
+    {
+     "head": "\"의사가 추천하는 기미 개선\"",
+     "desc": "AI로 만든 가짜 의사"
+    }
+   ],
+   "source": "한국소비자원 적발 사례 요지",
+   "photo": {
+    "q": "supplement pills capsules",
+    "alt": [
+     "vitamin capsules",
+     "pills bottle"
+    ]
+   }
+  },
+  {
+   "type": "story",
+   "kicker": "품목별로 보면",
+   "title": "{식품}이 312건\n열에 일곱",
+   "body": "화장품 72건, 의료서비스 21건 순.\n적발 건수도 작년 말 3개월 24건 →\n올해 상반기 396건으로 폭증.",
+   "photo": {
+    "q": "health food supplements shelf",
+    "alt": [
+     "supplements store",
+     "pharmacy shelf"
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "quote": "전후 사진, 후기, 전문가 추천\n{전부 AI일 수 있다}",
+   "body": "소비자원 당부 요지.\n올해 5월 법 개정으로 AI 가짜 전문가가\n식품·화장품을 추천하는 광고 자체가 금지됐다."
+  },
+  {
+   "type": "ask",
+   "title": "여러분은\n속아본 적 있다?",
+   "options": [
+    "있다, 결제까지 했다",
+    "없다, 딱 보면 안다"
+   ]
+  }
+ ]
+}

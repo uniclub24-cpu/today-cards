@@ -13,10 +13,10 @@
    "size": 92,
    "sub": "유튜브 숏폼 광고 속 가짜 후기·가짜 의사,\n9개월 동안 420건 걸렸다",
    "photo": {
-    "q": "smartphone scrolling hand dark",
+    "q": "smartphone",
     "alt": [
-     "smartphone in hand",
-     "mobile phone screen night"
+     "mobile phone hand",
+     "phone screen"
     ]
    }
   },
@@ -32,10 +32,10 @@
    "title": "체험 후기 조작\n{267건}",
    "body": "전체의 63.6%.\n전후 사진을 합성한 '몸 변화' 광고만 171건,\n있지도 않은 소비자 후기가 96건.",
    "photo": {
-    "q": "measuring tape height wall",
+    "q": "tape measure",
     "alt": [
      "measuring tape",
-     "tape measure"
+     "ruler"
     ]
    }
   },
@@ -43,7 +43,13 @@
    "type": "story",
    "kicker": "두 번째 수법",
    "title": "흰 가운의 그 의사도\n{AI}였다",
-   "body": "전문가 사칭 153건.\n의사·약사·간호사 사칭 46건,\n교수·개발자·장인 사칭 107건."
+   "body": "전문가 사칭 153건.\n의사·약사·간호사 사칭 46건,\n교수·개발자·장인 사칭 107건.",
+   "photo": {
+    "q": "stethoscope",
+    "alt": [
+     "stethoscope desk"
+    ]
+   }
   },
   {
    "type": "info",
@@ -76,14 +82,7 @@
    "type": "story",
    "kicker": "품목별로 보면",
    "title": "{식품}이 312건\n열에 일곱",
-   "body": "화장품 72건, 의료서비스 21건 순.\n적발 건수도 작년 말 3개월 24건 →\n올해 상반기 396건으로 폭증.",
-   "photo": {
-    "q": "health food supplements shelf",
-    "alt": [
-     "supplements store",
-     "pharmacy shelf"
-    ]
-   }
+   "body": "화장품 72건, 의료서비스 21건 순.\n적발 건수도 작년 말 3개월 24건 →\n올해 상반기 396건으로 폭증."
   },
   {
    "type": "quote",

@@ -1,0 +1,105 @@
+{
+ "meta": {
+  "date": "2026. 10. 30",
+  "tag": "유튜브 급상승",
+  "source": "YouTube 인기 급상승(한국) 10.30 09시 기준",
+  "photos": "stock"
+ },
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "오늘의 유튜브",
+   "headline": "\"마블이고 나발이고\"\n!듄 3 예고편이\n!급상승 2위",
+   "size": 92,
+   "sub": "지금 한국 유튜브를 달군 영상 4개,\n댓글 반응까지 정리했어요",
+   "photo": {
+    "q": "sand dunes desert",
+    "alt": [
+     "desert dunes sunset",
+     "sahara desert"
+    ]
+   }
+  },
+  {
+   "type": "story",
+   "kicker": "급상승 2위 · 영화",
+   "title": "'듄: 파트 3' 3차 예고편\n사흘 만에 {132만} 뷰",
+   "body": "12월 극장 개봉.\n댓글 1위(좋아요 2천)는\n\"마블이고 나발이고 이거 보려고\n올해를 버텼다\""
+  },
+  {
+   "type": "story",
+   "kicker": "급상승 3위 · 게임",
+   "title": "롤드컵 스위스 Day 5\n풀영상 {175만} 뷰",
+   "body": "T1이 유럽 MKOI를 2:0으로 꺾고\n녹아웃 스테이지 진출.\n댓글은 온통 \"도란 오늘 완벽\"",
+   "photo": {
+    "commons": "League of Legends World Championship",
+    "q": "esports arena",
+    "alt": [
+     "esports gaming tournament",
+     "gaming setup neon"
+    ]
+   }
+  },
+  {
+   "type": "story",
+   "kicker": "급상승 7위 · 음악",
+   "title": "아일릿 '체포하겠어' MV\n이틀 새 885만→{1,168만}",
+   "body": "좋아요 45만, 댓글 2.4만.\n음원 영상은 급상승 1위를\n이틀 연속 지키는 중.",
+   "photo": {
+    "commons": "ILLIT girl group",
+    "q": "lightstick concert",
+    "alt": [
+     "kpop fans concert"
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "quote": "롤드컵 시즌에\n{롤 뮤비}가 떴다",
+   "body": "아일릿 MV 설명란에 적힌 한 줄.\n\"리그 오브 레전드 권리는\n라이엇 게임즈 허가를 받아 사용\""
+  },
+  {
+   "type": "story",
+   "kicker": "급상승 21위 · 엔터",
+   "title": "엑스러브 'Hush' MV\n이틀 만에 {100만} 뷰",
+   "body": "세 번째 미니앨범 [i=!] 타이틀곡.\n좋아요 9.5만, 댓글 7천 개.",
+   "photo": {
+    "q": "stage spotlight dancer",
+    "alt": [
+     "concert stage lights",
+     "dance stage"
+    ]
+   }
+  },
+  {
+   "type": "info",
+   "title": "급상승 30개 한눈에",
+   "items": [
+    {
+     "head": "게임 13",
+     "desc": "롤드컵 관련만 4개, 마크·메이플 실황"
+    },
+    {
+     "head": "음악 12",
+     "desc": "아일릿·라이즈 신곡이 나란히"
+    },
+    {
+     "head": "영화 3",
+     "desc": "3개 전부 '듄: 파트 3'"
+    },
+    {
+     "head": "엔터 2",
+     "desc": "데블스 플랜 예고편, 엑스러브 MV"
+    }
+   ]
+  },
+  {
+   "type": "ask",
+   "title": "12월 극장,\n뭐 보실 거예요?",
+   "options": [
+    "듄: 파트 3",
+    "어벤져스: 둠스데이"
+   ]
+  }
+ ]
+}

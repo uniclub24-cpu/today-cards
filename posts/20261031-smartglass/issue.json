@@ -1,0 +1,78 @@
+{
+ "meta": {
+  "date": "2026. 10. 31",
+  "tag": "커뮤니티 화제",
+  "source": "한국교육과정평가원 유의사항 · 경향신문·뉴스핌·파이낸셜뉴스 보도 재구성",
+  "photos": "stock"
+ },
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "커뮤니티 발칵",
+   "headline": "\"시험 볼 땐\n!안경 벗으세요\"",
+   "size": 92,
+   "sub": "뿔테인 줄 알았던 그 안경,\n렌즈에 AI가 답을 띄우고 있었다",
+   "photo": {
+    "q": "eyeglasses on desk exam paper",
+    "alt": ["eyeglasses on book", "glasses on table"]
+   }
+  },
+  {
+   "type": "story",
+   "kicker": "어제 커뮤니티 화제글",
+   "title": "\"스마트 안경 막으려\n{안경 착용 금지}\"",
+   "body": "한 대학 시험 공지라며 올라온 글에\n추천 수백 개, 댓글 600개 넘게 달렸다.\n\"그럼 눈 나쁜 사람은 어떡하냐\" 갑론을박."
+  },
+  {
+   "type": "story",
+   "kicker": "이달에만 두 번",
+   "title": "대입 논술장에서\n{스마트 안경} 적발",
+   "body": "10월 3일 서울시립대, 10월 10일 연세대.\n시립대는 즉시 퇴실에\n3년간 지원 금지 처분을 내렸다.",
+   "photo": {
+    "q": "exam hall students writing",
+    "alt": ["students taking exam", "examination room"]
+   }
+  },
+  {
+   "type": "story",
+   "kicker": "수법은 이랬다",
+   "title": "본인 확인 땐 일반 안경,\n시작하면 {바꿔 쓰기}",
+   "body": "안경 속 초소형 카메라로 문제를 찍으면\nAI가 풀어서 렌즈에 답을 띄운다.\n두꺼운 뿔테와 겉모습이 거의 같다."
+  },
+  {
+   "type": "info",
+   "tag": "2027 수능 (11월 19일)",
+   "title": "스마트 안경, {이렇게} 처리된다",
+   "items": [
+    {"head": "쓰고 있다 걸리면", "desc": "올해 시험 무효 + 내년 수능 응시 정지"},
+    {"head": "가방에 소지만 해도", "desc": "1교시 전에 안 냈으면 그 시험 무효"},
+    {"head": "감독관이 요청하면", "desc": "안경 벗어 책상 위에, 거부하면 같은 처분"}
+   ],
+   "source": "한국교육과정평가원 수험생 유의사항 요지",
+   "photo": {
+    "q": "smart glasses wearable",
+    "alt": ["augmented reality glasses", "eyeglasses frame"]
+   }
+  },
+  {
+   "type": "story",
+   "kicker": "대학가도 비상",
+   "title": "조교 1명이\n{100명} 감독하는데…",
+   "body": "고려대는 중간고사 스마트기기 금지 공지,\n계명대는 대기실 기기 일괄 수거,\n영남대는 금속탐지기까지 검토 중.",
+   "photo": {
+    "q": "university lecture hall",
+    "alt": ["empty lecture hall", "classroom desks"]
+   }
+  },
+  {
+   "type": "quote",
+   "quote": "이제 뿔테 안경만 봐도\n{의심부터 해야 하나}",
+   "body": "국가자격시험에서도 올해 5건 적발.\n반면 유학생 통역 등 쓸모 있는 기능까지\n막힐까 우려하는 목소리도 있다."
+  },
+  {
+   "type": "ask",
+   "title": "시험장 안경 검사,\n여러분 생각은?",
+   "options": ["당연하다, 다 벗겨라", "과하다, 눈 나쁜 게 죄냐"]
+  }
+ ]
+}

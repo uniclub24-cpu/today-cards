@@ -1,0 +1,46 @@
+{
+ "1": {
+  "query": {
+   "q": "eyeglasses on desk exam paper",
+   "alt": [
+    "eyeglasses on book",
+    "glasses on table"
+   ]
+  },
+  "page": "https://pixabay.com/photos/ghost-office-abandoned-horror-5265642/",
+  "image": "https://pixabay.com/get/ga8ab5e2bba7af86d925471d550fe1fd5cfc4bb256d4eae6b56373256fabad4461e5b3c3fde31c7be8666df7c5f085be227d6e20ab8f6b109c4f46b6365c174e2_1280.jpg"
+ },
+ "3": {
+  "query": {
+   "q": "exam hall students writing",
+   "alt": [
+    "students taking exam",
+    "examination room"
+   ]
+  },
+  "page": "https://pixabay.com/photos/new-york-station-urban-nyc-travel-4734476/",
+  "image": "https://pixabay.com/get/gea928bd4e63e9ff9b35e3f79dc090e3cad8a95c279f43ed680aef628302c894f48cbda187dde5c1646797ed577708b3eb6c598fa4158837c77e7a5e2aed08505_1280.jpg"
+ },
+ "5": {
+  "query": {
+   "q": "smart glasses wearable",
+   "alt": [
+    "augmented reality glasses",
+    "eyeglasses frame"
+   ]
+  },
+  "page": "https://pixabay.com/photos/dog-pet-portrait-cute-intelligent-7879338/",
+  "image": "https://pixabay.com/get/g82e0da3142a55bdd6e9179aaad2497b9f4dd60f5d782a263db3d2d1b5de3ae45b28b4efd33f2141d79bc132cbaadc10b3620ed098240d0fd73c725e6b1c6d2e8_1280.jpg"
+ },
+ "6": {
+  "query": {
+   "q": "university lecture hall",
+   "alt": [
+    "empty lecture hall",
+    "classroom desks"
+   ]
+  },
+  "page": "https://pixabay.com/photos/samford-hall-auburn-university-1772565/",
+  "image": "https://pixabay.com/get/g42353c4ae528db64df5493586917e173f521975bf1025ccec527a164e8bf2da438ff77d36c120bd3b6b94e8ade94fec1bddb9dd5b022a7d5d2eaeefec407ba95_1280.jpg"
+ }
+}

@@ -13,10 +13,10 @@
    "size": 92,
    "sub": "뿔테인 줄 알았던 그 안경,\n렌즈에 AI가 답을 띄우고 있었다",
    "photo": {
-    "q": "eyeglasses",
+    "q": "glasses on open book",
     "alt": [
-     "spectacles lenses",
-     "reading glasses"
+     "eyeglasses on desk",
+     "spectacles on notebook"
     ]
    }
   },
@@ -32,10 +32,10 @@
    "title": "대입 논술장에서\n{스마트 안경} 적발",
    "body": "10월 3일 서울시립대, 10월 10일 연세대.\n시립대는 즉시 퇴실에\n3년간 지원 금지 처분을 내렸다.",
    "photo": {
-    "q": "exam pencil answer sheet",
+    "q": "students writing exam classroom",
     "alt": [
-     "test paper pencil",
-     "multiple choice test"
+     "exam desk pencil",
+     "students test classroom"
     ]
    }
   },

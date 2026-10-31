@@ -13,8 +13,11 @@
    "size": 92,
    "sub": "뿔테인 줄 알았던 그 안경,\n렌즈에 AI가 답을 띄우고 있었다",
    "photo": {
-    "q": "eyeglasses on desk exam paper",
-    "alt": ["eyeglasses on book", "glasses on table"]
+    "q": "eyeglasses",
+    "alt": [
+     "spectacles lenses",
+     "reading glasses"
+    ]
    }
   },
   {
@@ -29,30 +32,45 @@
    "title": "대입 논술장에서\n{스마트 안경} 적발",
    "body": "10월 3일 서울시립대, 10월 10일 연세대.\n시립대는 즉시 퇴실에\n3년간 지원 금지 처분을 내렸다.",
    "photo": {
-    "q": "exam hall students writing",
-    "alt": ["students taking exam", "examination room"]
+    "q": "exam pencil answer sheet",
+    "alt": [
+     "test paper pencil",
+     "multiple choice test"
+    ]
    }
   },
   {
    "type": "story",
    "kicker": "수법은 이랬다",
    "title": "본인 확인 땐 일반 안경,\n시작하면 {바꿔 쓰기}",
-   "body": "안경 속 초소형 카메라로 문제를 찍으면\nAI가 풀어서 렌즈에 답을 띄운다.\n두꺼운 뿔테와 겉모습이 거의 같다."
+   "body": "안경 속 초소형 카메라로 문제를 찍으면\nAI가 풀어서 렌즈에 답을 띄운다.\n두꺼운 뿔테와 겉모습이 거의 같다.",
+   "photo": {
+    "q": "camera lens macro",
+    "alt": [
+     "small camera lens",
+     "lens closeup"
+    ]
+   }
   },
   {
    "type": "info",
    "tag": "2027 수능 (11월 19일)",
    "title": "스마트 안경, {이렇게} 처리된다",
    "items": [
-    {"head": "쓰고 있다 걸리면", "desc": "올해 시험 무효 + 내년 수능 응시 정지"},
-    {"head": "가방에 소지만 해도", "desc": "1교시 전에 안 냈으면 그 시험 무효"},
-    {"head": "감독관이 요청하면", "desc": "안경 벗어 책상 위에, 거부하면 같은 처분"}
+    {
+     "head": "쓰고 있다 걸리면",
+     "desc": "올해 시험 무효 + 내년 수능 응시 정지"
+    },
+    {
+     "head": "가방에 소지만 해도",
+     "desc": "1교시 전에 안 냈으면 그 시험 무효"
+    },
+    {
+     "head": "감독관이 요청하면",
+     "desc": "안경 벗어 책상 위에, 거부하면 같은 처분"
+    }
    ],
-   "source": "한국교육과정평가원 수험생 유의사항 요지",
-   "photo": {
-    "q": "smart glasses wearable",
-    "alt": ["augmented reality glasses", "eyeglasses frame"]
-   }
+   "source": "한국교육과정평가원 수험생 유의사항 요지"
   },
   {
    "type": "story",
@@ -61,7 +79,10 @@
    "body": "고려대는 중간고사 스마트기기 금지 공지,\n계명대는 대기실 기기 일괄 수거,\n영남대는 금속탐지기까지 검토 중.",
    "photo": {
     "q": "university lecture hall",
-    "alt": ["empty lecture hall", "classroom desks"]
+    "alt": [
+     "empty lecture hall",
+     "classroom desks"
+    ]
    }
   },
   {
@@ -72,7 +93,10 @@
   {
    "type": "ask",
    "title": "시험장 안경 검사,\n여러분 생각은?",
-   "options": ["당연하다, 다 벗겨라", "과하다, 눈 나쁜 게 죄냐"]
+   "options": [
+    "당연하다, 다 벗겨라",
+    "과하다, 눈 나쁜 게 죄냐"
+   ]
   }
  ]
 }

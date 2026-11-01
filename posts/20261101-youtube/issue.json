@@ -37,7 +37,14 @@
    "type": "story",
    "kicker": "급상승 16위 · 커버",
    "title": "Ado가 헤이즈 'And July'를\n불렀다, 14시간 {46만} 뷰",
-   "body": "얼마 전 음악 페스티벌에서 먼저 선보인 곡.\n좋아요 3.5만, 댓글 2천 개."
+   "body": "얼마 전 음악 페스티벌에서 먼저 선보인 곡.\n좋아요 3.5만, 댓글 2천 개.",
+   "photo": {
+    "q": "summer night city lights",
+    "alt": [
+     "night city bokeh",
+     "neon city night"
+    ]
+   }
   },
   {
    "type": "quote",
@@ -50,10 +57,10 @@
    "title": "롤드컵 스위스 Day 7\n풀영상 {197만} 뷰",
    "body": "한화생명이 G2를 2:0으로 꺾고 생존.\n댓글은 \"제우스 피지컬 미쳤다\".\n그러나 오늘 아침 BLG에 0:2,\n8강 문턱에서 탈락.",
    "photo": {
-    "q": "esports arena stage",
+    "q": "gaming keyboard neon",
     "alt": [
-     "esports gaming tournament",
-     "gaming setup neon"
+     "rgb gaming setup",
+     "gaming mouse keyboard"
     ]
    }
   },
@@ -61,14 +68,7 @@
    "type": "story",
    "kicker": "급상승 30위 · 음악",
    "title": "스키즈 승민 × 한로로\n좋아요 {8만} 개",
-   "body": "'시간을 달리네'와 악뮤 곡을 함께 커버.\n조회수 48만에 좋아요 8만,\n시청자 6명 중 1명이 눌렀다.",
-   "photo": {
-    "q": "acoustic guitar microphone",
-    "alt": [
-     "singer microphone studio",
-     "recording studio microphone"
-    ]
-   }
+   "body": "'시간을 달리네'와 악뮤 곡을 함께 커버.\n조회수 48만에 좋아요 8만,\n시청자 6명 중 1명이 눌렀다."
   },
   {
    "type": "info",

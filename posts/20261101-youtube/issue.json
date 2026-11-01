@@ -1,0 +1,105 @@
+{
+ "meta": {
+  "date": "2026. 11. 01",
+  "tag": "유튜브 급상승",
+  "source": "YouTube 인기 급상승(한국) 11.01 09시 기준",
+  "photos": "stock"
+ },
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "오늘의 유튜브",
+   "headline": "지수 신곡\n!이틀 연속\n!급상승 1위",
+   "size": 100,
+   "sub": "Ado의 헤이즈 커버, 한화생명의 24시간까지\n지금 한국 유튜브를 달군 영상 4개",
+   "photo": {
+    "q": "pink stage lights concert",
+    "alt": [
+     "concert stage lights",
+     "concert crowd lights"
+    ]
+   }
+  },
+  {
+   "type": "story",
+   "kicker": "급상승 1위 · 음악",
+   "title": "지수 'ADDICTED'\nMV 하루 남짓 {898만} 뷰",
+   "body": "어제는 뮤직비디오, 오늘은 음원이 1위.\n댓글 1위(좋아요 1,895)는\n\"해외 팬들 여기 출석 체크!\"",
+   "photo": {
+    "commons": "Jisoo",
+    "q": "kpop concert",
+    "alt": [
+     "lightstick concert"
+    ]
+   }
+  },
+  {
+   "type": "story",
+   "kicker": "급상승 16위 · 커버",
+   "title": "Ado가 헤이즈 'And July'를\n불렀다, 14시간 {46만} 뷰",
+   "body": "얼마 전 음악 페스티벌에서 먼저 선보인 곡.\n좋아요 3.5만, 댓글 2천 개."
+  },
+  {
+   "type": "quote",
+   "quote": "한국어 발음은 어렵지만\n{그래도 재미있어요}",
+   "body": "Ado가 영상 설명란에 직접 남긴 말.\n\"닭한마리 정말 좋아해, 칼국수 먹고 싶다\""
+  },
+  {
+   "type": "story",
+   "kicker": "급상승 5위 · 게임",
+   "title": "롤드컵 스위스 Day 7\n풀영상 {197만} 뷰",
+   "body": "한화생명이 G2를 2:0으로 꺾고 생존.\n댓글은 \"제우스 피지컬 미쳤다\".\n그러나 오늘 아침 BLG에 0:2,\n8강 문턱에서 탈락.",
+   "photo": {
+    "commons": "Hanwha Life Esports",
+    "q": "esports arena",
+    "alt": [
+     "esports gaming tournament",
+     "gaming setup neon"
+    ]
+   }
+  },
+  {
+   "type": "story",
+   "kicker": "급상승 30위 · 음악",
+   "title": "스키즈 승민 × 한로로\n좋아요 {8만} 개",
+   "body": "'시간을 달리네'와 악뮤 곡을 함께 커버.\n조회수 48만에 좋아요 8만,\n시청자 6명 중 1명이 눌렀다.",
+   "photo": {
+    "commons": "Stray Kids",
+    "q": "acoustic guitar microphone",
+    "alt": [
+     "singer microphone studio"
+    ]
+   }
+  },
+  {
+   "type": "info",
+   "title": "급상승 30개 한눈에",
+   "items": [
+    {
+     "head": "게임 15 : 음악 15",
+     "desc": "오늘은 정확히 반반"
+    },
+    {
+     "head": "아일릿 2개",
+     "desc": "'체포하겠어' 음원 346만, 퍼포먼스 MV 222만"
+    },
+    {
+     "head": "무한의 계단",
+     "desc": "스트리머 전설 방송, 이틀 연속 차트인 137만"
+    },
+    {
+     "head": "롤드컵 2개",
+     "desc": "Day 7 풀영상, G2 vs 한화생명 하이라이트"
+    }
+   ]
+  },
+  {
+   "type": "ask",
+   "title": "오늘 하루\n뭐 들으실 거예요?",
+   "options": [
+    "지수 'ADDICTED'",
+    "Ado 'And July' 커버"
+   ]
+  }
+ ]
+}
